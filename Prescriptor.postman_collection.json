@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "23247408-8140-424a-9b6d-6e8625dc1858",
+		"name": "Prescriptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddMedicine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"drugName\":\"Paracetamol\",\n\t\"drugDescription\":\"Analgesic - Fever Reducer\",\n\t\"drugManufaturer\":\"Herb Bio\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/Medicine/addMedicine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"Medicine",
+						"addMedicine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMedicine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"drugName\":\"Paracetamol\",\n\t\"drugDescription\":\"Analgesic and a very good Fever Reducer\",\n\t\"drugManufaturer\":\"Mankind Laboratories\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/v1/medicine/updateMedicine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"v1",
+						"medicine",
+						"updateMedicine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMedicines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMedicineByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1111/medicine/Paracetamol?id=Paracetamol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"medicine",
+						"Paracetamol"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "Paracetamol"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patMobile\" : 9444902435,\r\n    \"patFirstName\" : \"Susila\",\r\n    \"patLastName\" : \"Natarajan\",\r\n    \"patLoc\" : \"chennai\",\r\n    \"patGender\" : \"Female\",\r\n    \"patDOB\" : \"16-08-1955\",\r\n    \"patFirstVisit\" : \"10-02-2020\",\r\n    \"patHealthStat\" : {\r\n        \"diabeticFlag\" : false,\r\n        \"bloodPressure\" : \"Normal\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/api/v1/patient/addPatient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"v1",
+						"patient",
+						"addPatient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patID\":1003,\r\n    \"patFirstName\" : \"Susila\",\r\n    \"patLastName\" : \"Natarajan\",\r\n    \"patLoc\" : \"Chennai\",\r\n    \"patGender\" : \"Female\",\r\n    \"patDOB\" : \"16-AUG-1955\",\r\n    \"patFirstVisit\" : \"10-02-2020\",\r\n    \"patHealthStat\" : {\r\n        \"diabeticFlag\" : false,\r\n        \"bloodPressure\" : \"High\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/patient/updatePatient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"patient",
+						"updatePatient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1111/api/v1/patient/getPatients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"api",
+						"v1",
+						"patient",
+						"getPatients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPatientVisits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patID\" : 1002,\r\n    \"patFirstName\" : \"Natarajan\",\r\n    \"patLastName\" : \"Krishnasamy\",\r\n    \"patLoc\" : \"chennai\",\r\n    \"visitDate\" : \"10-JAN-2020\",\r\n    \"notes\" : \"This is free note about patient\",\r\n    \"presList\" : [ \r\n        {\r\n            \"tabName\" : \"tab1\",\r\n            \"mQty\" : 1,\r\n            \"aQty\" : 0,\r\n            \"nQty\" : 1\r\n        }, \r\n        {\r\n            \"tabName\" : \"Paracetamol\",\r\n            \"mQty\" : 1,\r\n            \"aQty\" : 0,\r\n            \"nQty\" : 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/visit/addPatientVisit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"visit",
+						"addPatientVisit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePatientVisits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patID\" : 1002,\r\n    \"patFirstName\" : \"Natarajan\",\r\n    \"patLastName\" : \"Krishnasamy\",\r\n    \"patLoc\" : \"chennai\",\r\n    \"visitDate\" : \"10-JAN-2020\",\r\n    \"notes\" : \"This is free note about patient\",\r\n    \"presList\" : [ \r\n        {\r\n            \"tabName\" : \"tab1\",\r\n            \"mQty\" : 1,\r\n            \"aQty\" : 0.5,\r\n            \"nQty\" : 0.5\r\n        }, \r\n        {\r\n            \"tabName\" : \"Paracetamol\",\r\n            \"mQty\" : 1,\r\n            \"aQty\" : 0.5,\r\n            \"nQty\" : 0.5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1111/visit/updateVisit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1111",
+					"path": [
+						"visit",
+						"updateVisit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientVisits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientVisitsByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
